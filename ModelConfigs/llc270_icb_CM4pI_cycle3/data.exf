@@ -1,0 +1,142 @@
+# *********************
+# External Forcing Data
+# *********************
+#
+  &EXF_NML_01
+#
+ useAtmWind        = .TRUE.,
+# #NCEP VALUES:
+# # exf_albedo        = 0.15,
+# # exf_scal_BulkCdn  = 1.015,
+# #
+# #TO COMBINE WITH ALLOW_ZENITH_ANGLE:
+  exf_albedo        = 0.1,
+  useExfZenIncoming = .TRUE., 
+  select_ZenAlbedo  = 1,
+#    # 
+  ocean_emissivity = 0.97,
+  ice_emissivity = 0.95,
+  snow_emissivity = 0.95,
+#       #
+  exf_iprec         = 32,
+  exf_yftype        = 'RL',
+#  useExfYearlyFields= .TRUE.,
+  useExfCheckRange  = .FALSE.,
+ /
+#
+#
+ &EXF_NML_02
+ atempfile         = '/anvil/scratch/x-myoungs/MITgcm_SO/CM4/tas_llc270_pIControl_new.bin',
+ aqhfile           = '/anvil/scratch/x-myoungs/MITgcm_SO/CM4/huss_llc270_pIControl_new.bin',
+ precipfile        = '/anvil/scratch/x-myoungs/MITgcm_SO/CM4/pr_llc270_pIControl_new.bin',
+ uwindfile         = '/anvil/scratch/x-myoungs/MITgcm_SO/CM4/uas_llc270_pIControl_new.bin',
+ vwindfile         = '/anvil/scratch/x-myoungs/MITgcm_SO/CM4/vas_llc270_pIControl_new.bin',
+ swdownfile        = '/anvil/scratch/x-myoungs/MITgcm_SO/CM4/rsds_llc270_pIControl_new.bin',
+ lwdownfile        = '/anvil/scratch/x-myoungs/MITgcm_SO/CM4/rlds_llc270_pIControl_new.bin',
+#
+ atempstartdate1   = 19920101,
+ atempstartdate2   = 120000,
+ atempperiod       = 86400.0,
+#
+ aqhstartdate1     = 19920101,
+ aqhstartdate2     = 120000,
+ aqhperiod         = 86400.0,
+#
+ precipstartdate1  = 19920101,
+ precipstartdate2  = 120000,
+ precipperiod      = 86400.0,
+#
+# runofffile        = 'runoff-2d-Fekete-1deg-mon-V4-SMOOTH.bin',
+# runoffperiod      = -12,
+#
+ uwindstartdate1   = 19920101,
+ uwindstartdate2   = 120000,
+ uwindperiod       = 86400.0,
+#
+ vwindstartdate1   = 19920101,
+ vwindstartdate2   = 120000,
+ vwindperiod       = 86400.0,
+#
+ swdownstartdate1  = 19920101,
+ swdownstartdate2  = 120000,
+ swdownperiod      = 86400.0,
+#
+ lwdownstartdate1  = 19920101,
+ lwdownstartdate2  = 120000,
+ lwdownperiod      = 86400.0,
+ /
+ &
+#
+  &EXF_NML_03
+#NOT FOR EIG exf_offset_atemp  = 273.3971,
+ exf_offset_atemp  = 273.15,
+# #NOT FOR NEW RUNOFF FIELD exf_inscal_runoff = 3.1710e-08,
+  exf_inscal_swdown = -1.0,
+  exf_inscal_lwdown = -1.0,
+#   # to compensate for sea level rise for nlfs/realFWF
+#   #precip_exfremo_intercept = 1.073E-9,
+#   #precip_exfremo_slope = -3.340E-18,
+ /
+#    #
+#
+ &EXF_NML_04
+ runoff_interpMethod = 0,
+#
+ atemp_lon0        =   0.625D0,
+ atemp_lon_inc     =  1.25D0,
+ atemp_lat0        = -89.5D0,
+ atemp_lat_inc     = 179*1.00D0,
+ atemp_nlon        = 288,
+ atemp_nlat        = 180,
+#
+ aqh_lon0        =  0.62500D0,
+ aqh_lon_inc     =   1.250D0,
+ aqh_lat0        = -89.5D0,
+ aqh_lat_inc     = 179*1.00D0,
+ aqh_nlon        = 288,
+ aqh_nlat        = 180,
+#
+ precip_lon0        =   0.6250D0,
+ precip_lon_inc     =   1.250D0,
+ precip_lat0        = -89.50D0,
+ precip_lat_inc     = 179*1.0D0,
+ precip_nlon        = 288,
+ precip_nlat        = 180,
+#
+ uwind_lon0        =   0.62500D0,
+ uwind_lon_inc     =   1.250D0,
+ uwind_lat0        = -89.50D0,
+ uwind_lat_inc     = 179*1.00D0,
+ uwind_nlon        = 288,
+ uwind_nlat        = 180,
+#
+ vwind_lon0        = 0.62500D0,
+ vwind_lon_inc     =   1.250D0,
+ vwind_lat0        = -89.50D0,
+ vwind_lat_inc     = 179*1.0D0,
+ vwind_nlon        = 288,
+ vwind_nlat        = 180,
+#
+ swdown_lon0        = 0.62500D0,
+ swdown_lon_inc     =   1.250D0,
+ swdown_lat0        = -89.50D0,
+ swdown_lat_inc     = 179*1.0D0,
+ swdown_nlon        = 288,
+ swdown_nlat        = 180,
+#
+ lwdown_lon0        =  0.62500D0,
+ lwdown_lon_inc     =   1.250D0,
+ lwdown_lat0        = -89.5D0,
+ lwdown_lat_inc     = 179*1.0D0
+ lwdown_nlon        = 288,
+ lwdown_nlat        = 180,
+ /
+ &
+
+ &EXF_NML_OBCS
+#
+ obcsNstartdate1   = 19920115,
+ obcsNstartdate2   = 120000,
+ obcsNperiod       = 2635200.0,   
+ /
+ &

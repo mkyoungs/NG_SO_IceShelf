@@ -1,0 +1,13 @@
+# *******************************
+# Parameter for SHELFICE package
+# ******************************
+ &SHELFICE_PARM01
+ SHELFICEboundaryLayer = .TRUE.,
+# SHELFICEloadAnomalyFile = 'phi0surf_llc270_1080x310.bin',
+ SHELFICEtopoFile   = 'draft_llc270_rtopo_1080x310.bin',
+ SHELFICEconserve = .TRUE.,
+ no_slip_shelfice = .false.,
+ SHELFICEwriteState = .TRUE.,
+ SHELFICEuseGammaFrict = .FALSE.,
+ SHELFICEheatTransCoeff = 0.5E-4,
+ &

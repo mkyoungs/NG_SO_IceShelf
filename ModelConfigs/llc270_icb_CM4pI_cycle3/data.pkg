@@ -1,0 +1,16 @@
+# Packages
+ &PACKAGES
+ useEXF   = .TRUE.,
+ useLayers = .TRUE.,
+ useCAL   = .TRUE.,
+ useGMRedi= .TRUE.,
+ useSeaice= .TRUE.,
+ useGGL90 = .FALSE.,
+ useKPP = .TRUE.,
+ useSALT_PlUME=.TRUE.,
+ useDiagnostics=.TRUE.,
+ useSHELFICE    = .TRUE.,
+ useOBCS = .TRUE.,
+ useRBCS = .FALSE.,
+# useBBL=.TRUE.,
+ /

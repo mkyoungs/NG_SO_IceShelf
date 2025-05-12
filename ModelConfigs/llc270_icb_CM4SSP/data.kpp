@@ -1,0 +1,9 @@
+# ===================
+# | KPP parameters  |
+# ===================
+
+# I/O related parameters
+ &KPP_PARM01
+ KPPmixingMaps=.FALSE.,
+ KPPwriteState=.TRUE.,
+ &

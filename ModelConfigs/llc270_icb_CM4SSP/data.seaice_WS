@@ -1,0 +1,30 @@
+# =============++======
+# | SEAICE  parameters |
+# =============++======
+
+ &SEAICE_PARM01
+ LSR_ERROR=1.00000000e-04,
+ SEAICEwriteState=.TRUE.,
+ SEAICEuseDYNAMICS=.TRUE.,
+ SEAICE_multDim=7,
+ SEAICE_dryIceAlb=9.20000000e-01,
+ SEAICE_wetIceAlb=8.00000000e-01,
+ SEAICE_drySnowAlb=9.60000000e-01,
+ SEAICE_wetSnowAlb=8.30000000e-01,
+ SEAICE_drag=2.00000000e-03,
+ HO=5.00000000e-01,
+ SEAICE_no_slip=.FALSE.,
+ SEAICEadvScheme=7,
+ MIN_ATEMP=-4.00000000e+01,
+ MIN_TICE=-4.00000000e+01,
+ SEAICE_area_reg=1.50000000e-01,
+ SEAICE_hice_reg=1.00000000e-01,
+ IMAX_TICE=10,
+ SEAICE_EPS=1.00000000e-08,
+ SEAICE_doOpenWaterMelt=.TRUE.,
+ SEAICE_areaLossFormula=1,
+ SEAICE_wetAlbTemp=0.00000000e+00,
+ SEAICE_saltFrac=0.00000000e+00,
+ SEAICE_frazilFrac=3.00000000e-03,
+ SEAICEscaleSurfStress=.TRUE.,
+ &
